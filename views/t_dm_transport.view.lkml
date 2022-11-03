@@ -14,6 +14,17 @@ view: t_dm_transport {
     sql: ${TABLE}.dt ;;
   }
 
+  dimension: 1years {
+    type: string
+    label: "1년"
+    sql: cast(dt between DATE_SUB(CURRENT_DATE(), INTERVAL 1 YEAR) and CURRENT_DATE() as string) ;;
+  }
+
+  dimension: 2weeks {
+    type: string
+    label: "2주"
+    sql: cast(dt between DATE_SUB(CURRENT_DATE(), INTERVAL 2 WEEK) and CURRENT_DATE() as string) ;;
+  }
 
   dimension: line {
     type: string
