@@ -15,7 +15,7 @@ view: t_mas_holiday {
     }
     dimension: weekend_cd {
       type: string
-      label: "주말코드"
+      label: "주말"
       sql: ${TABLE}.weekend_cd ;;
     }
     dimension: holiday_cd {
